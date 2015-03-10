@@ -12,12 +12,12 @@ def get_args():
                    help='File containing paths')
     a.add_argument('-o', '--out-file', metavar='PATH', dest='out_file',
                    help='File to write out to. Else print to stdout.')
-    return p.parse_args
+    return a.parse_args
 
 def process_paths(lines_from_file):
     paths = []
     for line in lines_from_file:
-
+        pass
 
 
 def main(in_file, out_file):
