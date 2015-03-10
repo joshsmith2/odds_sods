@@ -18,13 +18,14 @@ def process_paths(lines_from_file):
     paths = []
     for line in lines_from_file:
         pass
-
+    return paths
 
 def main(in_file, out_file):
-    with open(in_file, 'r') as f:
-        unstripped = f.readlines()
-        lines = [ l.strip() for l in unstripped ]
-
+    with open(in_file, 'r') as in_f:
+        lines = [ l.strip() for l in in_f.readlines() ]
+    with open(out_file, 'w') as out_f:
+        for out_line in process_paths(lines):
+            out_f.write(out_line)
 
 if __name__ == "__main__":
     args = get_args()

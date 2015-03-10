@@ -9,5 +9,8 @@ class GeneralTest(unittest.TestCase):
         self.in_file = os.path.join(current_dir, 'paths.txt')
         self.out_file = os.path.join(current_dir, 'out.txt')
 
+    def tearDown(self):
+        os.remove(self.out_file)
+
 if __name__ == '__main__':
     unittest.main()

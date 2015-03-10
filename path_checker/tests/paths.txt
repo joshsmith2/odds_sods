@@ -1,6 +1,6 @@
-/usr/keep/this/in/
-/usr/keep/this/in/but/not/this
-/usr/tongue
+/usr/take/out/
+/usr/take/out/but/keep/this
+/usr/keep.txt
 
-/usr/after/empty
+/usr/still/in
 /usr/
