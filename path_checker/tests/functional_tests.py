@@ -10,7 +10,7 @@ class OutputTrimmedPaths(GeneralTest):
         unexpected = ['/usr/', '', '/usr/take/out']
 
         with open(self.out_file, 'r') as out_f:
-            lines = [l.strip for l in out_f.readlines()]
+            lines = [l.strip() for l in out_f.readlines()]
 
         self.assertEqual(set(lines), set(expected))
 
