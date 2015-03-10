@@ -1,0 +1,1 @@
+A tool developed in response to a client who kept sending through lists of files to move, containing both parent and children directories. This will remove the parents and keep the children, leaving you with a list of only the most specific provided objects.
