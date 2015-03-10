@@ -16,13 +16,29 @@ def get_args():
 
 def process_paths(lines_from_file):
     paths = []
-    for line in lines_from_file:
-        pass
+    split_paths = []
+
+    # Split up lines and sort by the length of the path, largest first:
+    split_lines = [l.split('/') for l in lines_from_file]
+    lines_by_path_length = sorted(split_lines, key=len, reverse=True)
+
+    # Append the longest path to split paths, then see if the others are
+    # subsets of it.
+    try:
+        split_paths.append(lines_by_path_length[0])
+    except IndexError:
+        raise Exception('No paths in input file ')
+
+    for line in lines_by_path_length:
+        for path in paths:
+            pass
+
+
     return paths
 
 def main(in_file, out_file):
     with open(in_file, 'r') as in_f:
-        lines = [ l.strip() for l in in_f.readlines() ]
+        lines = [l.strip() for l in in_f.readlines()]
     with open(out_file, 'w') as out_f:
         for out_line in process_paths(lines):
             out_f.write(out_line)
